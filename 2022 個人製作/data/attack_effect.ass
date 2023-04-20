@@ -1,0 +1,19 @@
+
+{
+    "file" : "data\\attack_effect.jpeg",
+
+    "frame" : {
+        "width"  : 288,
+        "height" : 360,
+        "cols"   : 5,
+        "rows"   : 1
+    },
+
+    "animations" : {
+        "wait" : {
+            "frames"    : [0, 1, 0, 2],
+            "interval"  : 0.075,
+            "loop"      : false
+        }
+    }
+}

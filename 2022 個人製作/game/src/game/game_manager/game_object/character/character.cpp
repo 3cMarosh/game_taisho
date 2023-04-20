@@ -1,4 +1,4 @@
-#include "character.h"
+#include"character.h"
 #include"..\effect_manager\effect_manager.h"
 #include"..\enemy_manager\enemy\enemy_sky\enemy_sky.h"
 
@@ -12,7 +12,6 @@ CCharacter::CCharacter(aqua::IGameObject* parent)
 
 void CCharacter::Initialize(void)
 {
-
 	m_BarSprite.Create("data\\barr.png");
 	m_BarSprite.position = aqua::CVector2(100.0f, 0.0f);
 }

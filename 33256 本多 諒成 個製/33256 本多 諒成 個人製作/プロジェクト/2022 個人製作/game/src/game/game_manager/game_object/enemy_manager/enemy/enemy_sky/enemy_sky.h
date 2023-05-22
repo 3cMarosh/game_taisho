@@ -66,7 +66,7 @@ private:
   
 
     static const int            m_CreateInteaval;
-    static const int            m_max_life;
+    //static const int            m_max_life;
 
     bool                        m_DeadFlag;
 };

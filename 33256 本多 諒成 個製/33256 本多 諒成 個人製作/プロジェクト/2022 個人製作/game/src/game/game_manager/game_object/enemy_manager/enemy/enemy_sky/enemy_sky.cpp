@@ -16,7 +16,7 @@
 #include "..\..\../stage/stage.h"
 #include "..\..\..\character\character.h"
 
-const int           CEnemySky::m_max_life = 1;
+//const int           CEnemySky::m_max_life = 1;
 const int           CEnemySky::m_CreateInteaval = 1;
 
 /*
@@ -47,7 +47,7 @@ Initialize(void)
     m_Esky.GetTextureWidth();
     m_Esky.GetTextureHeight();
 
-    m_Life = m_max_life;
+    //m_Life = m_max_life;
 
     m_Esky.color = 0xffff8080;
 
@@ -60,7 +60,7 @@ void CEnemySky::Update(void)
     aqua::CVector2 EnemyCenter = 
     { 
         m_Esky.position.x + m_Esky.GetTextureWidth(),
-        m_Esky.position.y + m_Esky.GetTextureHeight() 
+        m_Esky.position.y + m_Esky.GetTextureHeight(),
     };
 
     if (aqua::keyboard::Trigger(aqua::keyboard::KEY_ID::SPACE))

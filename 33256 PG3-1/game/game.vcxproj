@@ -99,21 +99,36 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\game\game.cpp" />
+    <ClCompile Include="src\game_object\burret_manager\bullet\Ibullet.cpp" />
+    <ClCompile Include="src\game_object\burret_manager\bullet\normal_bullet\normal_bullet.cpp" />
+    <ClCompile Include="src\game_object\burret_manager\burret_manager.cpp" />
+    <ClCompile Include="src\game_object\player\character2\character2.cpp" />
+    <ClCompile Include="src\game_object\player\character\character.cpp" />
+    <ClCompile Include="src\game_object\player\IPlayer.cpp" />
     <ClCompile Include="src\game_object\scene_manager\scene\game_main_scene\game_main.cpp" />
     <ClCompile Include="src\game_object\scene_manager\scene\result_scene\result_scene.cpp" />
     <ClCompile Include="src\game_object\scene_manager\scene\scene.cpp" />
     <ClCompile Include="src\game_object\scene_manager\scene\title_scene\title_scene.cpp" />
     <ClCompile Include="src\game_object\scene_manager\scene_manager.cpp" />
+    <ClCompile Include="src\game_object\stage\stage.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\game\game.h" />
+    <ClInclude Include="src\game_object\burret_manager\bullet\Ibullet.h" />
+    <ClInclude Include="src\game_object\burret_manager\bullet\normal_bullet\normal_bullet.h" />
+    <ClInclude Include="src\game_object\burret_manager\burret_manager.h" />
+    <ClInclude Include="src\game_object\player\character2\character2.h" />
+    <ClInclude Include="src\game_object\player\character\character.h" />
+    <ClInclude Include="src\game_object\game_object.h" />
+    <ClInclude Include="src\game_object\player\IPlayer.h" />
     <ClInclude Include="src\game_object\scene_manager\scene\game_main_scene\game_main.h" />
     <ClInclude Include="src\game_object\scene_manager\scene\result_scene\result_scene.h" />
     <ClInclude Include="src\game_object\scene_manager\scene\scene.h" />
     <ClInclude Include="src\game_object\scene_manager\scene\scene_id.h" />
     <ClInclude Include="src\game_object\scene_manager\scene\title_scene\title_scene.h" />
     <ClInclude Include="src\game_object\scene_manager\scene_manager.h" />
+    <ClInclude Include="src\game_object\stage\stage.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

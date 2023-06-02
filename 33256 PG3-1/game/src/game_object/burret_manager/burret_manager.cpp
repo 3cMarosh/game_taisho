@@ -27,7 +27,7 @@ void CBulletManager::Finalize(void)
 	IGameObject::Finalize();
 }
 
-void CBulletManager::Create(BULLET_ID bullet,aqua::CVector2 create_position)
+void CBulletManager::Create(BULLET_ID bullet,aqua::CVector2 create_position,CATEGORY_ID category)
 {
 	IBullet* b = nullptr;
 
@@ -36,7 +36,7 @@ void CBulletManager::Create(BULLET_ID bullet,aqua::CVector2 create_position)
 	case BULLET_ID::NORMAL:b = aqua::CreateGameObject<CNormalBullet>(this);
 		break;
 	}
-	b->SetUp(create_position);
+	b->SetUp(create_position,category);
 
 
 }

@@ -1,10 +1,10 @@
 #pragma once
 #include"aqua.h"
+#include"game_object/player/IPlayer.h"
 
 enum class BULLET_ID
 {
 	NORMAL,
-
 };
 
 class CBulletManager
@@ -18,7 +18,7 @@ public:
 	void Update(void)override;
 	void Draw(void)override;
 	void Finalize(void)override;
-	void Create(BULLET_ID bullet,aqua::CVector2 create_position);
+	void Create(BULLET_ID bullet,aqua::CVector2 create_position,CATEGORY_ID category);
 
 private:
 

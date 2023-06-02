@@ -10,15 +10,16 @@ void CNormalBullet::Initialize(void)
 {
 	m_bullet_sprite.Create("data\\abe.png");
 	m_bullet_sprite.position = m_b_position;
+	m_bullet_speed ;
 }
 
 void CNormalBullet::Update(void)
 {
-	m_bullet_sprite.position.x += 3.0f;
-	if (m_bullet_sprite.position.x >= 1280.0f)
-	{
-		m_bullet_sprite.Delete();
-	}
+	IBullet::Update();
+
+	m_bullet_sprite.position.x += cos(aqua::DegToRad(m_angle));
+	m_bullet_sprite.position.y += sin(aqua::DegToRad(m_angle));
+
 }
 
 void CNormalBullet::Draw(void)

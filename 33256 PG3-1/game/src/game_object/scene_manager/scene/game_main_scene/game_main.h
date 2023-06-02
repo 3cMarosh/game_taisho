@@ -12,6 +12,8 @@ public:
 	~CGameMainScene(void);
 	void Initialize(void)override;
 	void Update(void)override;
+	void Draw(void)override;
+	void Finalize(void)override;
 	float GetTime();
 
 private:

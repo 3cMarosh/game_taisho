@@ -7,28 +7,33 @@ const float CCharacter::m_friction = 0.95f;
 
 CCharacter::CCharacter(aqua::IGameObject* parent)
 	:IPlayer(parent,"Character")
+	,m_move_speed(0)
 {
 }
 
 void CCharacter::Initialize(void)
 {
-	m_CharaSprite.Create("data\\character.png");
-	m_CharaSprite.position = aqua::CVector2(150.0f, 350.0f);
+	m_CharacterSprite.Create("data\\character.png");
+	m_CharacterSprite.position = aqua::CVector2(150.0f, 350.0f);
+	m_bullet_manager = (CBulletManager*)aqua::FindGameObject("BulletManager");
+	m_category = CATEGORY_ID::PLAYER1;
 }
 
 void CCharacter::Update(void)
 {
+	Input();
+	Move();
 }
 
-void CCharacter::Draw(void)
-{
-}
-
-
-void CCharacter::Finalize(void)
-{
-}
-
+//void CCharacter::Draw(void)
+//{
+//}
+//
+//
+//void CCharacter::Finalize(void)
+//{
+//}
+//
 void CCharacter::Input(void)
 {
 	if (aqua::keyboard::Trigger
@@ -45,11 +50,12 @@ void CCharacter::Input(void)
 	if (aqua::keyboard::Trigger
 	(aqua::keyboard::KEY_ID::SPACE))
 	{
-		m_bullet_manager->Create(BULLET_ID::NORMAL, GetCenterPosition());
+		m_bullet_manager->Create(BULLET_ID::NORMAL, GetCenterPosition(),m_category);
 	}
 }
 
 void CCharacter::Move(void)
 {
+	m_CharacterSprite.position.y += m_move_speed;
 }
 

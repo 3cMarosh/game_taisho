@@ -40,6 +40,16 @@ void CGameMainScene::Update(void)
 	IGameObject::Update();
 }
 
+void CGameMainScene::Draw(void)
+{
+	IGameObject::Draw();
+}
+
+void CGameMainScene::Finalize(void)
+{
+	IGameObject::Finalize();
+}
+
 float CGameMainScene::GetTime()
 {
 	return m_GameMainTime.GetTime();

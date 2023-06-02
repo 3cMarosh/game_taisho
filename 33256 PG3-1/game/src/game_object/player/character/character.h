@@ -37,22 +37,22 @@ public:
     /*!
      *  @brief      ‰Šú‰»
      */
-    void        Initialize(void) override;
+    void        Initialize(void)override ;
 
     /*!
      *  @brief      XV
      */
-    void        Update(void) override;
+    void        Update(void)override;
 
     /*!
      *  @brief      •`‰æ
      */
-    void        Draw(void) override;
+    //void        Draw(void);
 
     /*!
      *  @brief      ‰ğ•ú
      */
-    void        Finalize(void) override;
+    //void        Finalize(void);
 
     //! “ü—Í
     void        Input(void);
@@ -71,7 +71,7 @@ private:
 
     static const unsigned int   m_clear_color;
 
-    aqua::CSprite               m_CharaSprite;
+    //aqua::CSprite               m_CharaSprite;
     aqua::CLinePrimitive        m_Line;
     aqua::CLabel                m_CheckLabel;
     aqua::CVector2              m_Position;

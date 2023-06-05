@@ -26,15 +26,6 @@ void CCharacter2::Update(void)
 	Move();
 }
 
-//void CCharacter2::Draw(void)
-//{
-//}
-//
-//
-//void CCharacter2::Finalize(void)
-//{
-//}
-//
 void CCharacter2::Input(void)
 {
 
@@ -52,9 +43,11 @@ void CCharacter2::Input(void)
 	if (aqua::keyboard::Trigger
 	(aqua::keyboard::KEY_ID::D))
 	{
+		
 		m_bullet_manager->Create(BULLET_ID::NORMAL, GetCenterPosition(),m_category);
 	}
 }
+
 
 void CCharacter2::Move(void)
 {

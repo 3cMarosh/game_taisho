@@ -21,19 +21,11 @@ void CCharacter::Initialize(void)
 
 void CCharacter::Update(void)
 {
+	
 	Input();
 	Move();
 }
 
-//void CCharacter::Draw(void)
-//{
-//}
-//
-//
-//void CCharacter::Finalize(void)
-//{
-//}
-//
 void CCharacter::Input(void)
 {
 	if (aqua::keyboard::Trigger

@@ -3,6 +3,8 @@
 
 CNormalBullet::CNormalBullet(aqua::IGameObject* parent)
 	:IBullet(parent,"NormalBullet")
+	,m_normal_cost(0)
+	,m_NormalFlag(false)
 {
 }
 
@@ -20,6 +22,12 @@ void CNormalBullet::Update(void)
 	m_bullet_sprite.position.x += cos(aqua::DegToRad(m_angle));
 	m_bullet_sprite.position.y += sin(aqua::DegToRad(m_angle));
 
+	m_normal_cost = +1;
+
+	if (m_bullet_cost < 2)
+	{
+		m_NormalFlag = true;
+	}
 }
 
 void CNormalBullet::Draw(void)
@@ -34,5 +42,5 @@ void CNormalBullet::Finlalize(void)
 
 void CNormalBullet::SetUp(aqua::CVector2 position)
 {
-	
+		
 }

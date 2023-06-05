@@ -14,6 +14,7 @@ public:
 	void Finlalize(void);
 	void SetUp(aqua::CVector2 position);
 private:
-	
+	bool			m_NormalFlag;
+	int             m_normal_cost;
 	aqua::CSprite  m_bullet_sprite;
 };

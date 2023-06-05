@@ -7,12 +7,6 @@ IPlayer::IPlayer(aqua::IGameObject* parent,const std::string& name)
 }
 
 
-//void IPlayer::Initialize(void)
-//{
-//	m_CharacterSprite.Create("data\\character.png");
-//
-//}
-
 void IPlayer::Update(void)
 {
 	
@@ -28,16 +22,6 @@ void IPlayer::Finalize(void)
 	m_CharacterSprite.Delete();
 }
 
-
-//void IPlayer::InPut(void)
-//{
-//}
-//
-//void IPlayer::Move(void)
-//{
-//	m_CharacterSprite.position.y += m_move_speed;
-//}
-
 aqua::CVector2 IPlayer::GetCenterPosition(void)
 {
 	aqua::CVector2 v;
@@ -48,3 +32,4 @@ aqua::CVector2 IPlayer::GetCenterPosition(void)
 	return v;
 
 }
+

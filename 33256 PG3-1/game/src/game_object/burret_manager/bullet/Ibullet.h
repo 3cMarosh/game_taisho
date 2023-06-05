@@ -10,10 +10,13 @@ public:
 
 	void Update(void);
 	void SetUp(aqua::CVector2 position,CATEGORY_ID category);
+	void GetBulletCost();
+
 
 protected:
 	aqua::CVector2  m_b_position;
 	aqua::CVector2  m_bullet_speed;
 	aqua::CSprite   m_bullet_sprite;
+	int             m_bullet_cost;
 	float m_angle;
 };

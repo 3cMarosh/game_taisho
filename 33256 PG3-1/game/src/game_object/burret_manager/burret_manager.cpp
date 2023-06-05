@@ -5,8 +5,8 @@
 
 CBulletManager::CBulletManager(aqua::IGameObject* parent)
 	:aqua::IGameObject(parent,"BulletManager")
-{
-}
+	{
+	}
 
 void CBulletManager::Initialize(void)
 {

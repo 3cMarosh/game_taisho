@@ -25,7 +25,7 @@ public:
 protected:
 
 	aqua::CSprite m_CharacterSprite;
-	float                     m_move_speed;
+	float                   m_move_speed;
 
 	CATEGORY_ID   m_category;
 	

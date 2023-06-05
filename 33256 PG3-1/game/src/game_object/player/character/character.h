@@ -63,22 +63,25 @@ public:
     //!移動
     void        Move(void);
 
-    //aqua::CVector2 GetCenterPosition();
+    aqua::CVector2 GetCenterPosition();
 
 private:
     //! 画面クリアカラー
 
 
     static const unsigned int   m_clear_color;
+    static const int            m_max_life;
 
-    //aqua::CSprite               m_CharaSprite;
     aqua::CLinePrimitive        m_Line;
     aqua::CLabel                m_CheckLabel;
     aqua::CVector2              m_Position;
     aqua::CVector2              m_Velocity;
     aqua::CVector2              m_Accelerate;
 
+    int                         m_Life;
+
     bool                        m_LandFlag;
+    bool                        m_DeadFlag;
     
     float                       m_move_speed;
 

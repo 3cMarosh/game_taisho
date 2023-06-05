@@ -1,6 +1,8 @@
 #pragma once
 #include"aqua.h"
 #include"..\Ibullet.h"
+class CCharacter;
+
 class CNormalBullet
 	:public IBullet
 {
@@ -14,7 +16,14 @@ public:
 	void Finlalize(void);
 	void SetUp(aqua::CVector2 position);
 private:
+
+	IPlayer*		m_Character_p;
 	bool			m_NormalFlag;
+	bool			m_DeleteFlag;
 	int             m_normal_cost;
-	aqua::CSprite  m_bullet_sprite;
+	int				m_bullet_life;
+	int				m_Life;
+	static const int m_max_life;
+
+	aqua::CSprite	m_bullet_sprite;
 };

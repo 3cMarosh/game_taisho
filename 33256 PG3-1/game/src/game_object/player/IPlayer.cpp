@@ -1,5 +1,7 @@
 #include "IPlayer.h"
 
+
+
 IPlayer::IPlayer(aqua::IGameObject* parent,const std::string& name)
 	:aqua::IGameObject(parent,name)
 	,m_move_speed(0)

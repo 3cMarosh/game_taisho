@@ -3,6 +3,7 @@
 #include"game_object/player/IPlayer.h"
 
 const float CCharacter2::m_friction = 0.95f;
+const int	CCharacter2::m_max_life = 1;
 
 
 CCharacter2::CCharacter2(aqua::IGameObject* parent)
@@ -17,7 +18,7 @@ void CCharacter2::Initialize(void)
 	m_CharacterSprite.position = aqua::CVector2(800.0f, 350.0f);
 	m_bullet_manager = (CBulletManager*)aqua::FindGameObject("BulletManager");
 	m_category = CATEGORY_ID::PLAYER2;
-	
+	m_Life = m_max_life;
 }
 
 void CCharacter2::Update(void)
@@ -52,5 +53,14 @@ void CCharacter2::Input(void)
 void CCharacter2::Move(void)
 {
 	m_CharacterSprite.position.y += m_move_speed;
+}
+
+aqua::CVector2 CCharacter2::GetCenterPosition()
+{
+	return
+	{
+		m_CharacterSprite.position.x + m_CharacterSprite.GetTextureWidth() / 2.0f,
+		m_CharacterSprite.position.y + m_CharacterSprite.GetTextureHeight() / 2.0f,
+	};
 }
 

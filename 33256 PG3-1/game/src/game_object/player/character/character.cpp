@@ -23,7 +23,6 @@ void CCharacter::Initialize(void)
 
 void CCharacter::Update(void)
 {
-	
 	Input();
 	Move();
 }
@@ -42,9 +41,14 @@ void CCharacter::Input(void)
 	}
 
 	if (aqua::keyboard::Trigger
-	(aqua::keyboard::KEY_ID::SPACE))
+	(aqua::keyboard::KEY_ID::Q))
 	{
 		m_bullet_manager->Create(BULLET_ID::NORMAL, GetCenterPosition(),m_category);
+	}
+	if (aqua::keyboard::Trigger
+	(aqua::keyboard::KEY_ID::A))
+	{
+		m_bullet_manager->Create(BULLET_ID::CURVE, GetCenterPosition(), m_category);
 	}
 }
 

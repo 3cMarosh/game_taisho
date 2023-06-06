@@ -4,12 +4,12 @@
 class CCharacter;
 class CCharacter2;
 
-class CNormalBullet
+class CCurveBullet
 	:public IBullet
 {
 public:
-	CNormalBullet(aqua::IGameObject* parent);
-	~CNormalBullet(void) = default;
+	CCurveBullet(aqua::IGameObject* parent);
+	~CCurveBullet(void) = default;
 
 	void Initialize(void);
 	void Update(void);
@@ -18,10 +18,10 @@ public:
 	void SetUp(aqua::CVector2 position);
 private:
 
-	IPlayer*		m_Character_p;
-	bool			m_NormalFlag;
+	IPlayer* m_Character_p;
+	bool			m_CurveFlag;
 	bool			m_DeleteFlag;
-	int             m_normal_cost;
+	int             m_curve_cost;
 	int				m_bullet_life;
 	int				m_Life;
 	static const int m_max_life;

@@ -7,7 +7,6 @@ CNormalBullet::CNormalBullet(aqua::IGameObject* parent)
 	:IBullet(parent,"NormalBullet")
 	,m_normal_cost(0)
 	,m_NormalFlag(false)
-	
 {
 }
 
@@ -17,6 +16,7 @@ void CNormalBullet::Initialize(void)
 	m_bullet_sprite.position = m_b_position;
 	m_bullet_speed ;
 	m_Character_p = (IPlayer*)aqua::FindGameObject("Character");
+	m_Character_p = (IPlayer*)aqua::FindGameObject("Character2");
 }
 
 void CNormalBullet::Update(void)

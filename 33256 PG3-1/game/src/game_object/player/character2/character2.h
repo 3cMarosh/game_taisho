@@ -61,13 +61,14 @@ public:
     //!移動
     void        Move(void);
 
-    //aqua::CVector2 GetCenterPosition();
+    aqua::CVector2 GetCenterPosition();
 
 private:
     //! 画面クリアカラー
 
 
     static const unsigned int   m_clear_color;
+    static const int            m_max_life;
 
     aqua::CLinePrimitive        m_Line;
     aqua::CLabel                m_CheckLabel;
@@ -75,11 +76,14 @@ private:
     aqua::CVector2              m_Velocity;
     aqua::CVector2              m_Accelerate;
 
+    int                         m_Life;
+    
     bool                        m_LandFlag;
+    bool                        m_DeadFlag;
 
     float                       m_move_speed;
 
-    CBulletManager* m_bullet_manager;
+    CBulletManager*             m_bullet_manager;
 
     static const float          m_friction;
 };

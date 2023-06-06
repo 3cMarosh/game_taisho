@@ -25,6 +25,7 @@ void CCurveBullet::Update(void)
 	IBullet::Update();
 
 	aqua::CVector2 BulletCenter =
+
 	{
 		m_bullet_sprite.position.x + m_bullet_sprite.GetTextureWidth() / 2.0f,
 		m_bullet_sprite.position.y + m_bullet_sprite.GetTextureHeight() / 2.0f

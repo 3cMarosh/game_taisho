@@ -18,13 +18,13 @@ public:
 	void SetUp(aqua::CVector2 position);
 private:
 
-	IPlayer* m_Character_p;
-	bool			m_CurveFlag;
-	bool			m_DeleteFlag;
-	int             m_curve_cost;
-	int				m_bullet_life;
-	int				m_Life;
-	static const int m_max_life;
+	IPlayer*			m_Character_p;
+	bool				m_CurveFlag;
+	bool				m_DeleteFlag;
+	int					m_curve_cost;
+	int					m_bullet_life;
+	int					m_Life;
+	static const int	m_max_life;
 
-	aqua::CSprite	m_bullet_sprite;
+	aqua::CSprite		m_bullet_sprite;
 };

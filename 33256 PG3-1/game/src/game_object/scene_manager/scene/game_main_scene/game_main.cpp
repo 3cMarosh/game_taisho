@@ -6,7 +6,7 @@
 #include"game_object/player/IPlayer.h"
 
 const std::string CGameMainScene::m_object_name = "GameMain";
-const float CGameMainScene::m_game_main_time = 30.0f;
+const float CGameMainScene::m_game_main_time = 9999.0f;
 
 CGameMainScene::CGameMainScene(aqua::IGameObject* parent)
 	:IScene(parent,"GameMainScene")

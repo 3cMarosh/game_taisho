@@ -29,6 +29,14 @@ void CCharacter::Update(void)
 
 void CCharacter::Input(void)
 {
+	if (m_CharacterSprite.position.y < 0)
+	{
+		m_CharacterSprite.position.y = 0;
+	}
+	if (m_CharacterSprite.position.y > 1216)
+	{
+		m_CharacterSprite.position.y = 1216;
+	}
 	if (aqua::keyboard::Trigger
 	(aqua::keyboard::KEY_ID::UP))
 	{

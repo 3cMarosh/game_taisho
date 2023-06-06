@@ -29,6 +29,15 @@ void CCharacter2::Update(void)
 
 void CCharacter2::Input(void)
 {
+	if (m_CharacterSprite.position.y < 0)
+	{
+		m_CharacterSprite.position.y = 0;
+	}
+	if (m_CharacterSprite.position.y > 1216)
+	{
+		m_CharacterSprite.position.y = 1216;
+	}
+
 
 	if (aqua::keyboard::Trigger
 	(aqua::keyboard::KEY_ID::O))
@@ -59,7 +68,7 @@ aqua::CVector2 CCharacter2::GetCenterPosition()
 {
 	return
 	{
-		m_CharacterSprite.position.x + m_CharacterSprite.GetTextureWidth() / 2.0f,
+		m_CharacterSprite.position.x + m_CharacterSprite.GetTextureWidth()/2.0f,
 		m_CharacterSprite.position.y + m_CharacterSprite.GetTextureHeight() / 2.0f,
 	};
 }

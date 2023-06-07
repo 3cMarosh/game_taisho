@@ -38,12 +38,12 @@ void CCharacter::Input(void)
 		m_CharacterSprite.position.y = 1216;
 	}
 	if (aqua::keyboard::Trigger
-	(aqua::keyboard::KEY_ID::UP))
+	(aqua::keyboard::KEY_ID::W))
 	{
 		m_move_speed = -1;
 	}
 	if (aqua::keyboard::Trigger
-	(aqua::keyboard::KEY_ID::DOWN))
+	(aqua::keyboard::KEY_ID::S))
 	{
 		m_move_speed = +1;
 	}
@@ -57,6 +57,11 @@ void CCharacter::Input(void)
 	(aqua::keyboard::KEY_ID::A))
 	{
 		m_bullet_manager->Create(BULLET_ID::CURVE, GetCenterPosition(), m_category);
+	}
+	if (aqua::keyboard::Trigger
+	(aqua::keyboard::KEY_ID::Z))
+	{
+		m_bullet_manager->Create(BULLET_ID::CLEAR, GetCenterPosition(), m_category);
 	}
 }
 

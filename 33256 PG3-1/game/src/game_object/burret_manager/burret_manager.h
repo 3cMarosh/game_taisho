@@ -6,6 +6,7 @@ enum class BULLET_ID
 {
 	NORMAL,
 	CURVE,
+	CLEAR,
 };
 
 class CBulletManager

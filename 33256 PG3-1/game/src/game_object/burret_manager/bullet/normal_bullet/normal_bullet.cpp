@@ -29,7 +29,7 @@ void CNormalBullet::Update(void)
 		m_bullet_sprite.position.y + m_bullet_sprite.GetTextureHeight()/2.0f
 	};
 
-	if ((BulletCenter - m_Character_p->GetCenterPosition()).Length() <= 32.0f)
+	if ((BulletCenter - m_Character_p->GetCenterPosition()).Length() <= 16.0f)
 	{
 		m_bullet_sprite.Delete();
 	}

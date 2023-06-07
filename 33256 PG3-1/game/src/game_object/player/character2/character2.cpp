@@ -40,7 +40,7 @@ void CCharacter2::Input(void)
 
 
 	if (aqua::keyboard::Trigger
-	(aqua::keyboard::KEY_ID::O))
+	(aqua::keyboard::KEY_ID::P))
 	{
 		m_move_speed = -1;
 	}
@@ -51,10 +51,19 @@ void CCharacter2::Input(void)
 	}
 
 	if (aqua::keyboard::Trigger
-	(aqua::keyboard::KEY_ID::D))
+	(aqua::keyboard::KEY_ID::O))
 	{
-		
 		m_bullet_manager->Create(BULLET_ID::NORMAL, GetCenterPosition(),m_category);
+	}
+	if (aqua::keyboard::Trigger
+	(aqua::keyboard::KEY_ID::K))
+	{
+		m_bullet_manager->Create(BULLET_ID::CURVE, GetCenterPosition(),m_category);
+	}
+	if (aqua::keyboard::Trigger
+	(aqua::keyboard::KEY_ID::M))
+	{
+		m_bullet_manager->Create(BULLET_ID::CLEAR, GetCenterPosition(),m_category);
 	}
 }
 

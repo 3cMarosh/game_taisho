@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\game\game.cpp" />
+    <ClCompile Include="src\game_object\burret_manager\bullet\clear_bullet\clear_bullet.cpp" />
     <ClCompile Include="src\game_object\burret_manager\bullet\curve_bullet\curve_bullet.cpp" />
     <ClCompile Include="src\game_object\burret_manager\bullet\Ibullet.cpp" />
     <ClCompile Include="src\game_object\burret_manager\bullet\normal_bullet\normal_bullet.cpp" />
@@ -116,6 +117,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\game\game.h" />
+    <ClInclude Include="src\game_object\burret_manager\bullet\clear_bullet\clear_bullet.h" />
     <ClInclude Include="src\game_object\burret_manager\bullet\curve_bullet\curve_bullet.h" />
     <ClInclude Include="src\game_object\burret_manager\bullet\Ibullet.h" />
     <ClInclude Include="src\game_object\burret_manager\bullet\normal_bullet\normal_bullet.h" />

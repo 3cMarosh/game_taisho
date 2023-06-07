@@ -13,9 +13,8 @@
 #include"..\scene_manager\scene\scene_id.h"
 #include"scene/scene.h"
 #include"scene/game_main_scene/game_main.h"
-//#include"title_scene/title_scene.h"
-//#include"game_main_scene/game_main_scene.h"
-//#include"result_scene/result_scene.h"
+#include"scene/title_scene/title_scene.h"
+#include"scene/result_scene/result_scene.h"
 
 const float CSceneManager::m_fade_speed = 255.0f;
 
@@ -46,7 +45,7 @@ Initialize(void)
     m_FadeSprite.color = aqua::CColor::BLACK;
 
     // スプラッシュシーンを始めに生成
-    Create(SCENE_ID::GAME_MAIN);
+    Create(SCENE_ID::TITLE);
 
     // シーンイン状態を設定
     m_State = STATE::SCENE_IN;
@@ -176,9 +175,9 @@ Create(SCENE_ID id)
     // idごとに新しくシーンを生成
     switch (id)
     {
-    //case SCENE_ID::TITLE:       scene = aqua::CreateGameObject<CTitleScene>(this);        break;
+    case SCENE_ID::TITLE:       scene = aqua::CreateGameObject<CTitleScene>(this);        break;
     case SCENE_ID::GAME_MAIN:    scene = aqua::CreateGameObject<CGameMainScene>(this);    break;
-    //case SCENE_ID::RESULT:      scene = aqua::CreateGameObject <CResultScene>(this);     break;
+    case SCENE_ID::RESULT:      scene = aqua::CreateGameObject <CResultScene>(this);     break;
     }
 
     AQUA_ASSERT(scene, "シーンが生成できませんでした。");

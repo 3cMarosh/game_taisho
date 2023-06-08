@@ -21,7 +21,7 @@ public:
 	//virtual void InPut(void) = 0;
 	//virtual void Move(void);
 	aqua::CVector2 GetCenterPosition(void);
-
+	CATEGORY_ID GetCategory(void);
 protected:
 
 	aqua::CSprite m_CharacterSprite;

@@ -18,5 +18,7 @@ protected:
 	aqua::CVector2  m_bullet_speed;
 	aqua::CSprite   m_bullet_sprite;
 	int             m_bullet_cost;
+	CATEGORY_ID		m_bullet_category;
+
 	float m_angle;
 };

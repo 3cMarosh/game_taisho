@@ -19,6 +19,7 @@ public:
 private:
 
 	IPlayer*		m_Character_p;
+	IPlayer*		m_2Character_p;
 	bool			m_NormalFlag;
 	bool			m_DeleteFlag;
 	int             m_normal_cost;

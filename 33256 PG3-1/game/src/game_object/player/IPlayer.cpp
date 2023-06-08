@@ -31,6 +31,10 @@ aqua::CVector2 IPlayer::GetCenterPosition(void)
 	v.y = m_CharacterSprite.position.y + m_CharacterSprite.GetTextureHeight() / 2.0f;
 
 	return v;
+}
 
+CATEGORY_ID IPlayer::GetCategory(void)
+{
+	return m_category;
 }
 

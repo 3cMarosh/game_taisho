@@ -32,6 +32,8 @@ void IBullet::SetUp(aqua::CVector2 position,CATEGORY_ID category)
 		m_angle = 180.0f;
 	}
 
+	m_bullet_category = category;
+
 	Initialize();
 
 }

@@ -9,6 +9,7 @@ const int	CCharacter2::m_max_life = 1;
 CCharacter2::CCharacter2(aqua::IGameObject* parent)
 	:IPlayer(parent,"Character2")
 	,m_move_speed(0)
+	,m_attack_cost(0)
 {
 }
 
@@ -23,6 +24,7 @@ void CCharacter2::Initialize(void)
 
 void CCharacter2::Update(void)
 {
+	m_attack_cost += 1;
 	Input();
 	Move();
 }
@@ -77,7 +79,7 @@ aqua::CVector2 CCharacter2::GetCenterPosition()
 {
 	return
 	{
-		m_CharacterSprite.position.x + m_CharacterSprite.GetTextureWidth()/2.0f,
+		m_CharacterSprite.position.x + m_CharacterSprite.GetTextureWidth() / 2.0f,
 		m_CharacterSprite.position.y + m_CharacterSprite.GetTextureHeight() / 2.0f,
 	};
 }

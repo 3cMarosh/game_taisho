@@ -77,6 +77,7 @@ private:
     aqua::CVector2              m_Accelerate;
 
     int                         m_Life;
+    int                         m_attack_cost;
     
     bool                        m_LandFlag;
     bool                        m_DeadFlag;

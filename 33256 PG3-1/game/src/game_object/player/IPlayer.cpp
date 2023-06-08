@@ -11,7 +11,6 @@ IPlayer::IPlayer(aqua::IGameObject* parent,const std::string& name)
 
 void IPlayer::Update(void)
 {
-	
 }
 
 void IPlayer::Draw(void)

@@ -62,6 +62,7 @@ public:
 
     //!ˆÚ“®
     void        Move(void);
+    void        Dead(void);
 
     aqua::CVector2 GetCenterPosition();
 
@@ -80,11 +81,9 @@ private:
     aqua::CTimer                m_CostTimer;
     int                         m_Life;
     int                         m_attack_cost;
-
-    bool                        m_LandFlag;
-    bool                        m_DeadFlag;
     
     float                       m_move_speed;
+    float                       m_move_center_speed;
 
     CBulletManager*             m_bullet_manager;
     

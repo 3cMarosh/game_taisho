@@ -20,12 +20,10 @@ private:
 
 	IPlayer*		m_Character_p;
 	IPlayer*		m_2Character_p;
-	bool			m_NormalFlag;
+	bool			m_DeadFlag;
 	bool			m_DeleteFlag;
 	int				m_bullet_life;
-	int				m_Life;
 	int				m_normal_cost;
-	static const int m_max_life;
 
 	aqua::CSprite	m_bullet_sprite;
 };

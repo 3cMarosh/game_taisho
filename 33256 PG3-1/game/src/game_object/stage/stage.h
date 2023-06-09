@@ -10,19 +10,15 @@ public:
 	void	Update(void)override;
 	void    Draw(void) override;
 	void    Finalize(void) override;
-	float   GetGroundLine(void) const;
-	float   GetGravity(void) const;
 
 private:
 
 
-	static const float      m_ground_line;
-	static const float      m_gravity;
 	aqua::CSprite           m_Main_BackGround;
-	aqua::CSprite           m_Main_BackGround1;
-	aqua::CSprite			m_Sky_Notes;
-	aqua::CSprite			m_Sky_Notes1;
-	aqua::CSprite			m_TextSprite;
+	aqua::CSprite			m_1PGuage;
+	aqua::CSprite			m_2PGuage;
+
+
 	aqua::CLabel	        m_text;
 
 	int                     m_back;

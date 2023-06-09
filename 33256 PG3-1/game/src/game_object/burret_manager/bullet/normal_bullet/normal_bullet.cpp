@@ -1,11 +1,10 @@
 #include "normal_bullet.h"
 #include"..\Ibullet.h"
 
-const int CNormalBullet::m_max_life = 1;
 
 CNormalBullet::CNormalBullet(aqua::IGameObject* parent)
 	:IBullet(parent,"NormalBullet")
-	,m_NormalFlag(false)
+	,m_DeadFlag(false)
 	
 {
 }
@@ -33,10 +32,12 @@ void CNormalBullet::Update(void)
 	if ((BulletCenter - m_Character_p->GetCenterPosition()).Length() <= 32.0f && m_bullet_category != CATEGORY_ID::PLAYER1)
 	{
 		m_bullet_sprite.Delete();
+		m_DeadFlag = true;
 	}
 	if ((BulletCenter - m_2Character_p->GetCenterPosition()).Length() <= 32.0f && m_bullet_category != CATEGORY_ID::PLAYER2)
 	{
 		m_bullet_sprite.Delete();
+		m_DeadFlag = true;
 	}
 
 	m_bullet_sprite.position.x += cos(aqua::DegToRad(m_angle));
@@ -58,4 +59,5 @@ void CNormalBullet::SetUp(aqua::CVector2 position)
 {
 		
 }
+
 

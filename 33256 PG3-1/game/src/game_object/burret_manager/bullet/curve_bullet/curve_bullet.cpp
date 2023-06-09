@@ -1,7 +1,6 @@
 #include "curve_bullet.h"
 #include"..\Ibullet.h"
 
-const int CCurveBullet::m_max_life = 1;
 
 CCurveBullet::CCurveBullet(aqua::IGameObject* parent)
 	:IBullet(parent,"CurveBullet")

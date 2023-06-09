@@ -3,7 +3,7 @@
 
 #pragma once
 
-#include "aqua.h"
+#include"aqua.h"
 #include"game_object/player/IPlayer.h"
 
 class CBulletManager;
@@ -80,10 +80,8 @@ private:
     int                         m_Life;
     int                         m_attack_cost;
     
-    bool                        m_LandFlag;
-    bool                        m_DeadFlag;
-
     float                       m_move_speed;
+    float                       m_move_center_speed;
 
     CBulletManager*             m_bullet_manager;
 

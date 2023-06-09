@@ -75,6 +75,7 @@ private:
     aqua::CVector2              m_Position;
     aqua::CVector2              m_Velocity;
     aqua::CVector2              m_Accelerate;
+    aqua::CTimer                m_CostTimer;
 
     int                         m_Life;
     int                         m_attack_cost;

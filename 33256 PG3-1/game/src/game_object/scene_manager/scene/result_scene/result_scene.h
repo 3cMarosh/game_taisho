@@ -19,7 +19,7 @@ public:
 private:
 
 
-	aqua::CLabel m_result_Label;
+	aqua::CSprite m_ResultSprite;
 	aqua::CSprite m_Result_BackGround;	//ゲームメイン背景のスプライト
 	aqua::CTimer	m_ResultTime;		//ゲームメインシーンのタイマー
 

@@ -13,6 +13,7 @@ CResultScene::~CResultScene(void)
 
 void CResultScene::Initialize(void)
 {
+	m_ResultSprite.Create("data\\result.png");
 }
 
 void CResultScene::Update(void)
@@ -25,10 +26,12 @@ void CResultScene::Update(void)
 
 void CResultScene::Draw(void)
 {
+	m_ResultSprite.Draw();
 }
 
 void CResultScene::Finalize(void)
 {
+	m_ResultSprite.Delete();
 }
 
 float CResultScene::GetTime()

@@ -19,7 +19,8 @@ public:
 private:
 
 
-	aqua::CLabel m_Title_Label;
+	aqua::CSprite m_Title_Sprite;
+	aqua::CSprite m_Title_message;
 	aqua::CSprite m_Title_BackGround;	//ゲームメイン背景のスプライト
 	aqua::CTimer	m_TitleTime;		//ゲームメインシーンのタイマー
 

@@ -15,8 +15,6 @@ private:
 
 
 	aqua::CSprite           m_Main_BackGround;
-	aqua::CSprite			m_1PGuage;
-	aqua::CSprite			m_2PGuage;
 
 
 	aqua::CLabel	        m_text;

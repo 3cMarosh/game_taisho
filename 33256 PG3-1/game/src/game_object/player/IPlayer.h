@@ -13,19 +13,19 @@ class IPlayer
 public:
 	IPlayer(aqua::IGameObject* parent ,const std::string& name);
 	~IPlayer(void) = default;
-	//virtual void Initialize(void) = 0;
+
 	virtual void Update(void);
 	virtual void Draw(void);
 	virtual void Finalize(void);
+	int Getcost();
 
-	//virtual void InPut(void) = 0;
-	//virtual void Move(void);
 	aqua::CVector2 GetCenterPosition(void);
 	CATEGORY_ID GetCategory(void);
 protected:
 
 	aqua::CSprite m_CharacterSprite;
 	float         m_move_speed;
+	int				m_attack_cost;
 
 	CATEGORY_ID   m_category;
 	

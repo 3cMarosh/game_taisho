@@ -3,6 +3,8 @@
 #include"aqua.h"
 #include"..\scene.h"
 
+
+
 class CGameMainScene
 	:public IScene
 {

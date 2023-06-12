@@ -1,5 +1,6 @@
 #include "curve_bullet.h"
 #include"..\Ibullet.h"
+#include"game_object/scene_manager/scene_manager.h"
 
 
 CCurveBullet::CCurveBullet(aqua::IGameObject* parent)
@@ -16,7 +17,6 @@ void CCurveBullet::Initialize(void)
 	m_bullet_speed ;
 	m_Character_p = (IPlayer*)aqua::FindGameObject("Character");
 	m_2Character_p = (IPlayer*)aqua::FindGameObject("Character2");
-	m_curve_cost = 2;
 }
 
 void CCurveBullet::Update(void)
@@ -31,13 +31,18 @@ void CCurveBullet::Update(void)
 		m_bullet_sprite.position.y + m_bullet_sprite.GetTextureHeight() / 2.0f
 	};
 
-	if ((BulletCenter - m_Character_p->GetCenterPosition()).Length() <= 32.0f &&m_bullet_category != CATEGORY_ID::PLAYER1)
+	if ((BulletCenter - m_Character_p->GetCenterPosition()).Length() <= 32.0f && m_bullet_category != CATEGORY_ID::PLAYER1)
 	{
+
 		m_bullet_sprite.Delete();
+		((CSceneManager*)aqua::FindGameObject("SceneManager"))->Change(SCENE_ID::RESULT);
+
 	}
-	if ((BulletCenter - m_2Character_p->GetCenterPosition()).Length() <= 32.0f &&m_bullet_category != CATEGORY_ID::PLAYER2)
+	if ((BulletCenter - m_2Character_p->GetCenterPosition()).Length() <= 32.0f && m_bullet_category != CATEGORY_ID::PLAYER2)
 	{
 		m_bullet_sprite.Delete();
+		((CSceneManager*)aqua::FindGameObject("SceneManager"))->Change(SCENE_ID::RESULT);
+
 	}
 
 	m_bullet_sprite.position.x += cos(aqua::DegToRad(m_angle));

@@ -4,6 +4,7 @@
 #include"game_object/player/character/character.h"
 #include"game_object/player/character2/character2.h"
 #include"game_object/player/IPlayer.h"
+#include"game_object/gauge/gauge.h"
 
 const std::string CGameMainScene::m_object_name = "GameMain";
 const float CGameMainScene::m_game_main_time = 9999.0f;
@@ -23,6 +24,7 @@ void CGameMainScene::Initialize(void)
 	aqua::CreateGameObject<CCharacter>(this);
 	aqua::CreateGameObject<CCharacter2>(this);
 	aqua::CreateGameObject<CBulletManager>(this);
+	aqua::CreateGameObject<CGauge>(this);
 
 
 	IGameObject::Initialize();

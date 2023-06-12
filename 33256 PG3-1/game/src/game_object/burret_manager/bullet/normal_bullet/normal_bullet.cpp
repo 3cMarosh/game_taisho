@@ -1,11 +1,11 @@
 #include "normal_bullet.h"
 #include"..\Ibullet.h"
+#include"game_object/scene_manager/scene_manager.h"
 
 
 CNormalBullet::CNormalBullet(aqua::IGameObject* parent)
 	:IBullet(parent,"NormalBullet")
 	,m_DeadFlag(false)
-	
 {
 }
 
@@ -13,10 +13,9 @@ void CNormalBullet::Initialize(void)
 {
 	m_bullet_sprite.Create("data\\bullet.png");
 	m_bullet_sprite.position = m_b_position;
-	m_bullet_speed ;
 	m_Character_p = (IPlayer*)aqua::FindGameObject("Character");
 	m_2Character_p = (IPlayer*)aqua::FindGameObject("Character2");
-	m_normal_cost = 1;
+
 }
 
 void CNormalBullet::Update(void)
@@ -32,13 +31,16 @@ void CNormalBullet::Update(void)
 	if ((BulletCenter - m_Character_p->GetCenterPosition()).Length() <= 32.0f && m_bullet_category != CATEGORY_ID::PLAYER1)
 	{
 		m_bullet_sprite.Delete();
-		m_DeadFlag = true;
+		((CSceneManager*)aqua::FindGameObject("SceneManager"))->Change(SCENE_ID::RESULT);
+
 	}
 	if ((BulletCenter - m_2Character_p->GetCenterPosition()).Length() <= 32.0f && m_bullet_category != CATEGORY_ID::PLAYER2)
 	{
 		m_bullet_sprite.Delete();
 		m_DeadFlag = true;
+		((CSceneManager*)aqua::FindGameObject("SceneManager"))->Change(SCENE_ID::RESULT);
 	}
+	
 
 	m_bullet_sprite.position.x += cos(aqua::DegToRad(m_angle));
 	m_bullet_sprite.position.y += sin(aqua::DegToRad(m_angle));

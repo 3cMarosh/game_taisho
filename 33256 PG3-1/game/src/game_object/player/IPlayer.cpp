@@ -23,6 +23,11 @@ void IPlayer::Finalize(void)
 	m_CharacterSprite.Delete();
 }
 
+int IPlayer::Getcost()
+{
+	return m_attack_cost;
+}
+
 aqua::CVector2 IPlayer::GetCenterPosition(void)
 {
 	aqua::CVector2 v;

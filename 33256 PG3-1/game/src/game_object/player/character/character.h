@@ -80,7 +80,7 @@ private:
     aqua::CVector2              m_Accelerate;
     aqua::CTimer                m_CostTimer;
     int                         m_Life;
-    int                         m_attack_cost;
+ 
     
     float                       m_move_speed;
     float                       m_move_center_speed;

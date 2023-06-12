@@ -104,6 +104,7 @@
     <ClCompile Include="src\game_object\burret_manager\bullet\Ibullet.cpp" />
     <ClCompile Include="src\game_object\burret_manager\bullet\normal_bullet\normal_bullet.cpp" />
     <ClCompile Include="src\game_object\burret_manager\burret_manager.cpp" />
+    <ClCompile Include="src\game_object\gauge\gauge.cpp" />
     <ClCompile Include="src\game_object\player\character2\character2.cpp" />
     <ClCompile Include="src\game_object\player\character\character.cpp" />
     <ClCompile Include="src\game_object\player\IPlayer.cpp" />
@@ -122,6 +123,7 @@
     <ClInclude Include="src\game_object\burret_manager\bullet\Ibullet.h" />
     <ClInclude Include="src\game_object\burret_manager\bullet\normal_bullet\normal_bullet.h" />
     <ClInclude Include="src\game_object\burret_manager\burret_manager.h" />
+    <ClInclude Include="src\game_object\gauge\gauge.h" />
     <ClInclude Include="src\game_object\player\character2\character2.h" />
     <ClInclude Include="src\game_object\player\character\character.h" />
     <ClInclude Include="src\game_object\game_object.h" />
